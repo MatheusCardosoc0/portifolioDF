@@ -10,16 +10,25 @@ import Carousel from './Carousel'
 const Projects = () => {
 
   const [viewProject, setViewProject] = useState(0)
+  const [count, setcount] = useState(0)
 
   function SetProject(n: number, visible?: boolean) {
     setViewProject(n)
-    if (visible) toast.dark('Clique duas vezes para acessar o site')
+    if (visible ){
+      if(count == 0){
+        toast.dark('Clique duas vezes para acessar o site')
+      }
+      setcount(prev => prev + 1)
+      if(count >= 3){
+        setcount(0)
+      }
+    }
   }
 
   return (
     <div className='mt-32 pb-32'>
       <h2 className='text-4xl font-bold underline decoration-amber-500 text-white drop-shadow-[1px_1px_30px_teal]'>
-        <p className='drop-shadow-[1px_1px_30px_yellow] text-center mb-20'>
+        <p className='drop-shadow-[1px_1px_30px_yellow] text-center mb-20' id='projects'>
           Projetos
         </p>
       </h2>
