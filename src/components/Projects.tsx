@@ -3,6 +3,7 @@ import { toast } from 'react-toastify'
 import { webAplications } from '../constants/AplicacoesWeb'
 import { Logotipos } from '../constants/Logotipos'
 import { Site } from '../constants/Sites'
+import { Thumbnails } from '../constants/Thumbnail'
 import Button from './Button'
 import Carousel from './Carousel'
 
@@ -10,29 +11,43 @@ const Projects = () => {
 
   const [viewProject, setViewProject] = useState(0)
 
-  function SetProject(n: number, visible?: boolean){
+  function SetProject(n: number, visible?: boolean) {
     setViewProject(n)
-    if(visible) toast.dark('Clique duas vezes para acessar o site')
+    if (visible) toast.dark('Clique duas vezes para acessar o site')
   }
 
   return (
-    <div className=''>
-      <h2 className='text-center text-4xl font-bold text-white my-8'>Projetos</h2>
+    <div className='mt-32 pb-32'>
+      <h2 className='text-4xl font-bold underline decoration-amber-500 text-white drop-shadow-[1px_1px_30px_teal]'>
+        <p className='drop-shadow-[1px_1px_30px_yellow] text-center mb-20'>
+          Projetos
+        </p>
+      </h2>
       <div className='flex flex-col max-w-[1200px] mx-auto gap-[1px]'>
-        <Button onClick={() => SetProject(1)}>Logotipos</Button>
+        <Button onClick={() => SetProject(1)} stylish='rounded-t-full'>
+          Logotipos
+        </Button>
         {viewProject == 1 && (
           <Carousel element={Logotipos} />
         )}
-        <Button onClick={() => SetProject(2, true)}>Sites</Button>
+        <Button onClick={() => SetProject(2, true)}>
+          Sites
+        </Button>
         {viewProject == 2 && (
           <Carousel element={Site} visible={true} />
         )}
-        <Button onClick={() => SetProject(3, true)}>Aplicações web</Button>
+        <Button onClick={() => SetProject(3, true)}>
+          Aplicações web
+        </Button>
         {viewProject == 3 && (
           <Carousel element={webAplications} visible={true} />
         )}
-        <Button onClick={() => SetProject(4)}>Aplicativos mobile</Button>
-        <Button onClick={() => SetProject(5)}>Thumbnail</Button>
+        {viewProject == 4 && (
+          <Carousel element={Thumbnails} />
+        )}
+        <Button onClick={() => SetProject(4)} stylish="rounded-b-full">
+          Thumbnail
+        </Button>
       </div>
     </div>
   )

@@ -42,7 +42,7 @@ const Carousel = ({element, visible}: CarouselProps) => {
      dragConstraints={{right: 0, left: - width}}>
       {element.map(item => (
         <motion.button style={{backgroundImage: `url(/${item.image})`}}
-         className={`w-[250px] h-[250px] bg-cover rounded-lg drop-shadow-[1px_1px_10px_teal] cursor-grabbing ${visible && 'w-[380px] bg-center cursor-pointer'} `}
+         className={`w-[350px] h-[250px] bg-contain bg-center bg-no-repeat rounded-lg drop-shadow-[1px_1px_10px_teal] cursor-grabbing ${visible && 'w-[380px] bg-center cursor-pointer'} `}
          
          onClick={() => handleLink(item.link? item.link : '')}>
 
