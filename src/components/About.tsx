@@ -11,7 +11,7 @@ const About = () => {
 
       <div className='flex flex-col gap-12 p-4 text-md md:text-xl drop-shadow-[1px_1px_30px_teal] font-bold text-gray-200 text-justify max-w-[700px]'>
         <p className=''>
-          Olá, sou Matheus Cardoso Luiz Costa, tenho conhecimento em desenvolvimento web, backend e mobile com javascript e suas tecnólogias, wordpress e desing, atualmente curso ánalise e desenvolvimento de sistemas na uninter e estou no 2 periodo.
+          Olá, sou Matheus Cardoso Luiz Costa, tenho conhecimento em desenvolvimento web, backend e mobile com javascript e suas tecnólogias, wordpress, desing e também sei usar o figma como um dev, atualmente curso ánalise e desenvolvimento de sistemas na uninter e estou no 2 periodo.
         </p>
         <ul className='flex flex-col gap-8 list-disc'>
           <li className='text-yellow-500 text-3xl'>
