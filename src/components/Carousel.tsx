@@ -42,11 +42,11 @@ const Carousel = ({element, visible}: CarouselProps) => {
      dragConstraints={{right: 0, left: - width}}>
       {element.map(item => (
         <motion.button style={{backgroundImage: `url(/${item.image})`}}
-         className={`md:w-[350px] md:h-[250px] w-[300px] h-[200px] bg-contain bg-center bg-no-repeat rounded-lg drop-shadow-[1px_1px_10px_teal] cursor-grabbing ${visible && ' bg-center cursor-pointer'} `}
+         className={`md:w-[350px] md:h-[250px] w-[300px] h-[200px] bg-contain bg-center bg-no-repeat rounded-lg drop-shadow-[1px_1px_10px_teal] cursor-grabbing ${visible && ' bg-center cursor-pointer'} group`}
          
          onClick={() => handleLink(item.link? item.link : '')}>
 
-         {visible && ( <AiFillEye className='relative left-1/2 -translate-x-1/2 text-6xl text-white drop-shadow-[1px_1px_2px_black]' />)}
+         {visible && ( <AiFillEye className='relative left-1/2 -translate-x-1/2 text-6xl text-white drop-shadow-[1px_1px_2px_black] group-hover:text-7xl group-hover:text-blue-400' />)}
 
         </motion.button>
       ))}

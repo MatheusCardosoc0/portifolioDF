@@ -16,7 +16,7 @@ const Projects = () => {
     setViewProject(n)
     if (visible ){
       if(count == 0){
-        toast.dark('Clique duas vezes para acessar o site')
+        toast.warning('Clique duas vezes para visualizar os sites')
       }
       setcount(prev => prev + 1)
       if(count >= 3){
