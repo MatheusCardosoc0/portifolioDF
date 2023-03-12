@@ -36,13 +36,13 @@ const Carousel = ({element, visible}: CarouselProps) => {
   }
 
   return (
-    <motion.div ref={carousel} className='flex flex-col md:flex-row my-12 gap-2 items-center justify-center'
+    <motion.div ref={carousel} className='flex flex-row my-12 gap-2 items-center justify-center flex-wrap'
     drag={"x"}
      whileTap={{cursor: 'grab'}}
      dragConstraints={{right: 0, left: - width}}>
       {element.map(item => (
         <motion.button style={{backgroundImage: `url(/${item.image})`}}
-         className={`md:w-[350px] md:h-[250px] w-[300px] h-[200px] bg-contain bg-center bg-no-repeat rounded-lg drop-shadow-[1px_1px_10px_teal] cursor-grabbing ${visible && ' bg-center cursor-pointer'} group`}
+         className={`md:w-[350px] md:h-[250px] w-[200px] h-[200px] bg-contain bg-center bg-no-repeat rounded-lg drop-shadow-[1px_1px_10px_teal] cursor-grabbing ${visible && ' bg-center cursor-pointer w-[300px]'} group`}
          
          onClick={() => handleLink(item.link? item.link : '')}>
 

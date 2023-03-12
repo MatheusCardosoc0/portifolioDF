@@ -16,12 +16,12 @@ const About = () => {
         <ul className='flex flex-col gap-8 list-disc'>
           <li className='text-yellow-500 text-3xl'>
             <p className='text-white text-base md:text-xl'>
-              Além disso também sou entusiasta do desing, sei fazer logotipos e thumbnails, com photoshop, illustrator e outros recursos.
+              Sei utilizar os frameworks, reactjs/nextjs para front-end, nodejs no backend e react-native com expo para projetos mobile.
             </p>
           </li>
           <li className='text-yellow-500 text-3xl'>
             <p className='text-white text-base md:text-xl'>
-              Quanto a banco de dados sei utilizar postgresql, e como ORM sei sobre o Prisma.
+              Quanto a banco de dados sei utilizar postgresql com Prisma.
             </p>
           </li>
           <li className='text-yellow-500 text-3xl'>

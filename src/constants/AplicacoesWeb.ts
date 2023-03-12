@@ -8,5 +8,9 @@ export const webAplications: SiteProps[] = [
   {
     image: 'countries.png',
     link: 'https://tubular-biscotti-da756e.netlify.app/'
+  },
+  {
+    image: 'photoLink.png',
+    link: 'https://github.com/MatheusCardosoc0/FrontendPhoto'
   }
 ]

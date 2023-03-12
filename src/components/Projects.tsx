@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 import { webAplications } from '../constants/AplicacoesWeb'
-import { Logotipos } from '../constants/Logotipos'
 import { Site } from '../constants/Sites'
 import { Thumbnails } from '../constants/Thumbnail'
 import Button from './Button'
@@ -14,12 +13,12 @@ const Projects = () => {
 
   function SetProject(n: number, visible?: boolean) {
     setViewProject(n)
-    if (visible ){
-      if(count == 0){
+    if (visible) {
+      if (count == 0) {
         toast.warning('Clique duas vezes para visualizar os sites')
       }
       setcount(prev => prev + 1)
-      if(count >= 3){
+      if (count >= 3) {
         setcount(0)
       }
     }
@@ -34,10 +33,10 @@ const Projects = () => {
       </h2>
       <div className='flex flex-col max-w-[1200px] mx-auto gap-[1px]'>
         <Button onClick={() => SetProject(1)} stylish='rounded-t-full'>
-          Logotipos
+          Aplicações web
         </Button>
         {viewProject == 1 && (
-          <Carousel element={Logotipos} />
+          <Carousel element={webAplications} visible />
         )}
         <Button onClick={() => SetProject(2, true)}>
           Sites
@@ -45,17 +44,11 @@ const Projects = () => {
         {viewProject == 2 && (
           <Carousel element={Site} visible={true} />
         )}
-        <Button onClick={() => SetProject(3, true)}>
-          Aplicações web
-        </Button>
-        {viewProject == 3 && (
-          <Carousel element={webAplications} visible={true} />
-        )}
         {viewProject == 4 && (
           <Carousel element={Thumbnails} />
         )}
         <Button onClick={() => SetProject(4)} stylish="rounded-b-full">
-          Thumbnail
+          Desings
         </Button>
       </div>
     </div>

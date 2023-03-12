@@ -12,5 +12,9 @@ export const Site: SiteProps[] = [
   {
     image: 'Sorveloteria.png',
     link: 'https://sorveloteria.netlify.app/'
+  },
+  {
+    image: 'keep.png',
+    link: 'https://keepsolucoes.online/'
   }
 ]

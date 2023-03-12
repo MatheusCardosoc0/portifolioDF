@@ -9,5 +9,18 @@ export const Thumbnails: ImagesProps[] = [
   },
   {
     image: 'thumb3.png'
-  }
+  },
+    {
+      image: 'P.png'
+    },
+    {
+      image: 'Pt.png'
+    },
+    {
+      image: 'Matheus5.png'
+    },
+    {
+      image: 'Mecaniclogo.png'
+    },
+  
 ]
